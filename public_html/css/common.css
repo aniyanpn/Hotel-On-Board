@@ -1,0 +1,152 @@
+/* 
+    Created on : 16 Jul, 2014, 11:20:44 PM
+    Author     : pnparam
+*/
+.left {
+    display: block;
+    float: left;
+}
+.right {
+    display: block;
+    float: right;
+}
+.center-img {
+    position: relative;
+    margin: 10px;
+}
+.center-img img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.main-content, .float-wrapper {
+    overflow: hidden;
+}
+
+.about {
+    background-image: url('../images/icons-png/ico-about.png') !important;
+}
+
+.booknow {
+    background-image: url('../images/icons-png/ico-booknow.png') !important;
+}
+
+.gallery {
+    background-image: url('../images/icons-png/ico-gallery.png') !important;
+}
+
+.location {
+    background-image: url('../images/icons-png/ico-location.png') !important;
+}
+
+.rooms {
+    background-image: url('../images/icons-png/ico-rooms.png') !important;
+}
+
+.amenity {
+    background-image: url('../images/icons-png/ico-amenity.png') !important;
+}
+
+.dining {
+    background-image: url('../images/icons-png/ico-dining.png') !important;
+}
+
+.feedback {
+    background-image: url('../images/icons-png/ico-feedback.png') !important;
+}
+
+.more {
+    background-image: url('../images/icons-png/ico-more.png') !important;
+}
+
+div.icon-button {
+    width: 143px;
+    display: inline-block;
+    float: none;
+    height: 93px;
+    border: 1px solid #e4e4e4;
+    background: white;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+    background-position: 52px 13px;
+    vertical-align: bottom;
+}
+
+div.icon-button a {
+    display: block;
+}
+
+.icon-button i.fa {
+    margin-top: 15px;
+    color: #3388cc;
+}
+
+div.row > div.icon-button:last-child {
+    margin-right: 0px;
+}
+
+.float-wrapper > div.row {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+div.ui-footer span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ui-header.ui-bar-a a.ui-btn-icon-notext, .ui-header.ui-bar-a a.ui-btn-icon-notext:hover {
+    border: none;
+    background: none;
+}
+
+ul.content li {
+    line-height: 30px;
+}
+
+.note {
+    font-weight: bold;
+}
+
+.item {
+    overflow: hidden;
+}
+
+.item img {
+    float: left;
+    margin-right: 10px;
+}
+
+.item span {
+    overflow: hidden;
+    white-space: initial;
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+}
+
+span.price {
+    font-weight: bold;
+    color: darkgreen;
+    font-size: 15px;
+    float: right;
+}
+
+li.template {
+    display: none !important;
+}
+
+.item span.remarks, .item span.quantity {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h2.success {
+    color: green;
+}
+

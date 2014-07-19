@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel On Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/hotel.min.css" />
+        <link rel="stylesheet" href="css/font-awesome-4.1.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script>
+            $(document).on('pageinit', '#dining', function(event) {
+                $("#itemlist").off('click', 'li a');
+                $("#itemlist").on('click', 'li a', itemSelected);
+            });
+            $(document).on('pageinit', '#itemdetails', function(event) {
+                $("#itemdetails").off('click', '#confirm');
+                $("#itemdetails").on('click', '#confirm', itemConfirm);
+            });
+            $(document).on('pageinit', '#success', function(event) {
+                $("#success").off('click', '#reset');
+                $("#success").on('click', '#reset', resetForm);
+            });
+        </script>
+        <script src="js/jquery.mobile-1.4.3.min.js"></script>
+        <script src="js/common.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-control-title="Home" id="home">
+            <div data-role="panel" id="panel2" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel2" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Hotel On Board
+                </h3>
+            </div>
+            <div data-role="content" class="no-padding">
+                <div data-controltype="image" class="center-img">
+                    <img src="images/baner-img.png" alt="baner">
+                </div>
+                <div class="main-content">
+                    <div class="float-wrapper">
+                        <div class="row">
+                            <div class="icon-button">
+                                <i class="fa fa-camera-retro fa-2x"></i>
+                                <a href="#about" data-transition="fade">
+                                    About
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-calendar fa-2x"></i>
+                                <a href="#booknow" data-transition="fade">
+                                    Book Now
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-picture-o fa-2x"></i>
+                                <a href="#gallery" data-transition="fade">
+                                    Gallery
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="icon-button">
+                                <i class="fa fa-map-marker fa-2x"></i>
+                                <a href="#location" data-transition="fade">
+                                    Location
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-key fa-2x"></i>
+                                <a href="#rooms" data-transition="fade">
+                                    Rooms
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-star fa-2x"></i>
+                                <a href="#amenity" data-transition="fade">
+                                    Amenity
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="icon-button">
+                                <i class="fa fa-coffee fa-2x"></i>
+                                <a href="#dining" data-transition="fade">
+                                    Dining
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-comments fa-2x"></i>
+                                <a href="#feedback" data-transition="fade">
+                                    Feedback
+                                </a>
+                            </div>
+                            <div class="icon-button">
+                                <i class="fa fa-angle-double-right fa-2x"></i>
+                                <a href="#more" data-transition="fade">
+                                    More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+        <div data-role="page" data-control-title="Home" id="amenity">
+            <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel3" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Amenities
+                </h3>
+            </div>
+            <div data-role="content" class="no-padding">
+                <div data-controltype="image" class="center-img">
+                    <img src="images/baner-amenity-img.png" alt="baner">
+                </div>
+                <div class="main-content">
+                    <ul class="content">
+                        <li>
+                            Fine Dining - However, if our guests have some special requirements, due to health problems or religion, we will prepare a suitable meal.
+                        </li>
+                        <li>
+                            Conference hall
+                        </li>
+                        <li>
+                            Money exchange service at reception
+                        </li>
+                        <li>
+                            Car parking with 24 hour CCTV
+                        </li>
+                        <li>
+                            Wi-Fi Connectivity at lobby level
+                        </li>
+                        <li>
+                            Fax & S.T.D., I.S.D. Direct Dialing
+                        </li>
+                        <li>
+                            Air Conditioning system (which can be regulated from each room)
+                        </li>
+                        <li>
+                            Laundry facilities
+                        </li>
+                        <li>
+                            Tourist Information with local travel Assistance
+                        </li>
+                        <li>
+                            Doctor - on-call
+                        </li>
+                    </ul>
+                    <span class="note">
+                        Note: All major credit cards are accepted
+                    </span>
+                </div>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+        <div data-role="page" data-control-title="Home" id="dining">
+            <div data-role="panel" id="panel4" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel4" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Dining
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" id="itemlist">
+                    <li data-role="list-divider" role="heading">
+                        Menu
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="pizza.jpeg">
+                            <div class="item">
+                                <img src="images/pizza.png" alt="Pizza" />
+                                <h6>Pizza</h6>
+                                <span class="desc">Pizza is an oven-baked flat bread typically topped with a tomato sauce, cheese and various toppings.</span>
+                                <span class="price">Price : 231.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="burger.png">
+                            <div class="item">
+                                <img src="images/burger.png" alt="Pizza" />
+                                <h6>Burger</h6>
+                                <span class="desc">A veggie burger is a hamburger-style, or chicken-style, patty that does not contain meat, but may contain animal products such as egg or milk.</span>
+                                <span class="price">Price : 73.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="spicy-sweet-and-sour-grilled-chicken.jpg">
+                            <div class="item">
+                                <img src="images/spicy-sweet-and-sour-grilled-chicken.png" alt="Pizza" />
+                                <h6>Grilled Chicken</h6>
+                                <span class="desc">It's got enough heat to titillate your taste buds, but not so much that kids will steer clear. The additions of tomato paste and soy sauce provide deep, dark, low notes that keep the sauce from squealing.</span>
+                                <span class="price">Price : 128.50</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="lemon-pepper-baked-chicken.jpg">
+                            <div class="item">
+                                <img src="images/lemon-pepper-baked-chicken.png" alt="Pizza" />
+                                <h6>Lemon Pepper Baked Chicken</h6>
+                                <span class="desc">Include this perfectly seasoned baked chicken in your weeknight rotation of recipes. It takes just minutes to prepare, then into the oven for baking.</span>
+                                <span class="price">Price : 74.50</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="vegetables-ginger-garlic-sauce.jpg">
+                            <div class="item">
+                                <img src="images/vegetables-ginger-garlic-sauce.png" alt="Pizza" />
+                                <h6>Vegetables in Ginger-Garlic with Sesame seeds</h6>
+                                <span class="desc">A nutrition-rich, colorful mixed vegetable dish with a wonderful combination of flavors and amazing texture.</span>
+                                <span class="price">Price : 227.00</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#itemdetails" data-transition="slide" data-orgimg="cremecaramel.jpg">>
+                            <div class="item">
+                                <img src="images/cremecaramel.png" alt="Pizza" />
+                                <h6>Creme Caramel</h6>
+                                <span class="desc">Creme caramel is a stylish gluten-free dessert which everyone will love.</span>
+                                <span class="price">Price : 322.50</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+        <div data-role="page" data-control-title="Home" id="itemdetails">
+            <div data-role="panel" id="panel5" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel5" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Dining
+                </h3>
+                <a data-controltype="panelbutton" data-theme="b" data-role="button" href="#dining" class="ui-btn-right">Back</a>
+            </div>
+            <div data-role="content">
+                <div data-controltype="textblock">
+                    <h2>
+                        <b id="itemname">
+                            Pizza
+                        </b>
+                    </h2>
+                </div>
+                <div data-controltype="image" class="center-img">
+                    <input type="hidden" id="thumbimg" />
+                    <img src="images/org/pizza.jpeg" alt="image" id="orgimg">
+                </div>
+                <div data-controltype="textblock">
+                    <p id="description">
+                        Pizza is an oven-baked flat bread typically topped with a tomato sauce,
+                        cheese and various toppings.
+                    </p>
+                    <span id="price" class="price"></span>
+                </div>
+                <div data-role="fieldcontain" data-controltype="textinput">
+                    <label for="textinput3">
+                        Quantity
+                    </label>
+                    <input name="" id="txtquantity" placeholder="" value="" type="number">
+                </div>
+                <div data-role="fieldcontain" data-controltype="textinput">
+                    <label for="textinput4">
+                        Remarks
+                    </label>
+                    <input name="" id="txtremarks" placeholder="" value="" type="text">
+                </div>
+                <a data-role="button" id="confirm" href="#order" data-theme="a">
+                    Confirm
+                </a>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+        <div data-role="page" data-control-title="Home" id="order">
+            <div data-role="panel" id="panel6" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel6" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Dining - Order
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" id="orderlist">
+                    <li data-role="list-divider" role="heading">
+                        Items
+                    </li>
+                    <li data-theme="b"  class="template">
+                        <a href="#itemdetails" data-transition="slide">
+                            <div class="item">
+                                <img src="images/pizza.png" alt="Pizza" />
+                                <h6>Pizza</h6>
+                                <span class="desc">Pizza is an oven-baked flat bread typically topped with a tomato sauce, cheese and various toppings.</span>
+                                <span class="remarks"></span>
+                                <span class="quantity"></span>
+                                <span class="price">Price : 231.00</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" id="confirm" href="#dining" data-theme="b">
+                    Add Another
+                </a>
+                <a data-role="button" href="#success" data-theme="a">
+                    Submit
+                </a>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+        <div data-role="page" data-control-title="Home" id="success">
+            <div data-role="panel" id="panel7" data-position="left" data-display="reveal"
+                 data-theme="b">
+                <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                    <li data-role="list-divider" role="heading">
+                        Navigate
+                    </li>
+                    <li data-theme="b">
+                        <a href="#home" data-transition="slide">
+                            Home
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#about" data-transition="slide">
+                            About
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#booknow" data-transition="slide">
+                            Book Now
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#gallery" data-transition="slide">
+                            Gallery
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#location" data-transition="slide">
+                            Location
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#rooms" data-transition="slide">
+                            Rooms
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#amenity" data-transition="slide">
+                            Amenity
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#dining" data-transition="slide">
+                            Dining
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#feedback" data-transition="slide">
+                            Feedback
+                        </a>
+                    </li>
+                    <li data-theme="b">
+                        <a href="#more" data-transition="slide">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="header">
+                <a data-controltype="panelbutton" data-role="button" href="#panel7" data-icon="bars"
+                   data-iconpos="notext" class="ui-btn-left">
+                </a>
+                <h3>
+                    Dining - Order Success
+                </h3>
+            </div>
+            <div data-role="content">
+                <h2 class="success">
+                    Order Submitted
+                </h2>
+                <div>
+                    <a href="#home" data-transition="fade" id="reset">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+            <div data-theme="b" data-role="footer" data-position="fixed">
+                <h3>
+                    <span class="left"><i class="ico-phone"></i>Call Us Now!</span>
+                    <span class="right">&copy; 2014, Hotel On Board</span>
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>

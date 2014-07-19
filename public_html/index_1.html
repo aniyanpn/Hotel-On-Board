@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <title>Test App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.3.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <div data-role="page" data-control-title="Home" id="page1">
+        <div data-theme="a" data-role="header" data-position="fixed">
+            <h3>
+                Test App
+            </h3>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                <li data-role="list-divider" role="heading">
+                    Items
+                </li>
+                <li data-theme="c">
+                    <a href="#page2" data-transition="slide">
+                        Item1
+                    </a>
+                </li>
+                <li data-theme="c">
+                    <a href="#page3" data-transition="slide">
+                        Item2
+                    </a>
+                </li>
+            </ul>
+            <div data-role="fieldcontain" data-controltype="searchinput">
+                <input name="" id="searchinput1" placeholder="Search Items" value="" type="search">
+            </div>
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <div  data-role="fieldcontain"  >
+                        		<a href="#page2" data-controltype="image"  data-transition="slide">
+                            		<img style="width: 156px; height: 100px" src="images/pizza.jpg" alt="image" >
+                            </a>
+                       	</div>
+                    </li>
+                    <li>
+                       	<div data-role="fieldcontain" data-controltype="textblock">
+                            <strong>
+                                Lorem ipsum dolor
+                            </strong>
+                            <br/>
+                            <span style="font-size: small;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nisi et sem sodales vulputate. Sed tempus augue non nisl varius viverra. 
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;" />
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <div data-role="fieldcontain" >
+                        		<a href="#page3" data-transition="slide">
+                            		<img style="width: 140px; height: 100px" src="images/burger.jpg" alt="image" >
+                            </a>
+                       	</div>
+                    </li>
+                    <li>
+                       	<div data-role="fieldcontain" data-controltype="textblock">
+                            <strong>
+                                Lorem ipsum dolor
+                            </strong>
+                            <br/>
+                            <span style="font-size: small;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nisi et sem sodales vulputate. Sed tempus augue non nisl varius viverra. 
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;" />
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <div data-role="fieldcontain" >
+                        		<a href="#page2" data-transition="slide">
+                            		<img style="width: 156px; height: 100px" src="images/pizza.jpg" alt="image" >
+                            </a>
+                       	</div>
+                    </li>
+                    <li>
+                       	<div data-role="fieldcontain" data-controltype="textblock">
+                            <strong>
+                               	Lorem ipsum dolor
+                            </strong>
+                            <br/>
+                            <span style="font-size: small;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nisi et sem sodales vulputate. Sed tempus augue non nisl varius viverra. 
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;" />
+        </div>
+
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="slide" data-theme="" data-icon="home">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" data-control-title="Platforms" id="page2">
+        <div data-theme="a" data-role="header" data-position="fixed">
+            <h3>
+                Test App
+            </h3>
+        </div>
+        <div data-role="content">
+            <h3>
+                Lorem ipsum dolor
+            </h3>
+            <div style=" position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                 data-controltype="image">
+                <img src="images/pizza.jpg" alt="image" style=" width: 288px; height: 200px; ">
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <span>
+                        <strong>
+                            Lorem ipsum
+                        </strong>
+                        dolor sit amet, consectetur adipiscing elit. Nullam urna augue, tincidunt
+                        sit amet mollis eu, consectetur ac nulla. Morbi malesuada nulla sed magna
+                        posuere bibendum. Duis ut ultrices tellus. Maecenas sit amet augue pharetra
+                        ante fermentum consectetur. Morbi id molestie felis.
+                    </span>
+                </p>
+            </div>
+            <div data-role="fieldcontain" data-controltype="textinput">
+                <label for="textinput3">
+                    Quantity
+                </label>
+                <input name="" id="textinput3" placeholder="Enter Quantity" value="" type="text"
+                       data-mini="true">
+            </div>
+            <div data-role="fieldcontain" data-controltype="textinput">
+            <label for="textinput4">
+                Remarks
+            </label>
+            <input name="" id="textinput4" placeholder="Enter Remarks" value="" type="text">
+        </div>
+            <input type="submit" value="Submit">
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="slide" data-theme="" data-icon="home">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" data-control-title="Platforms" id="page3">
+        <div data-theme="a" data-role="header" data-position="fixed">
+            <h3>
+                Test App
+            </h3>
+        </div>
+        <div data-role="content">
+            <h3>
+                Lorem ipsum dolor
+            </h3>
+            <div style=" position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                 data-controltype="image">
+                <img src="images/burger.jpg" alt="image" style=" width: 288px; height: 200px; ">
+            </div>
+            <div data-controltype="textblock">
+                <p>
+                    <span>
+                        <strong>
+                            Lorem ipsum
+                        </strong>
+                        dolor sit amet, consectetur adipiscing elit. Nullam urna augue, tincidunt
+                        sit amet mollis eu, consectetur ac nulla. Morbi malesuada nulla sed magna
+                        posuere bibendum. Duis ut ultrices tellus. Maecenas sit amet augue pharetra
+                        ante fermentum consectetur. Morbi id molestie felis.
+                    </span>
+                </p>
+            </div>
+            <div data-role="fieldcontain" data-controltype="textinput">
+                <label for="textinput3">
+                    Quantity
+                </label>
+                <input name="" id="textinput3" placeholder="Enter Quantity" value="" type="text"
+                       data-mini="true">
+            </div>
+            <div data-role="fieldcontain" data-controltype="textinput">
+            <label for="textinput4">
+                Remarks
+            </label>
+            <input name="" id="textinput4" placeholder="Enter Remarks" value="" type="text">
+        </div>
+            <input type="submit" value="Submit">
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="slide" data-theme="" data-icon="home">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.3.min.js"></script>
+</body>
+</html>
+
